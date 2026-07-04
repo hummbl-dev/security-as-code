@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "v0.1-draft",
+  "securityManifest": {
+    "id": "security-as-code/agent-admission-v1",
+    "title": "Agent admission security checks",
+    "version": 1,
+    "scope": "agent-admission",
+    "description": "Minimal check list for safe change admission in public repos."
+  },
+  "authority": {
+    "owner": "security-as-code",
+    "canActOnBehalfOf": ["security_team", "platform_team"]
+  },
+  "checks": [
+    {
+      "id": "permissions",
+      "name": "Permission boundary check",
+      "type": "permission",
+      "severity": "high",
+      "status": "manual-review",
+      "outcome": "verify-owner-paths"
+    },
+    {
+      "id": "secret-boundary",
+      "name": "Secret boundary check",
+      "type": "secret",
+      "severity": "critical",
+      "status": "warn",
+      "outcome": "manual-review",
+      "evidence": ["no-raw-secrets", "redacted-logs"]
+    },
+    {
+      "id": "dependency-check",
+      "name": "Dependency risk review",
+      "type": "dependency",
+      "severity": "medium",
+      "status": "pass",
+      "outcome": "reviewed-known-risks"
+    }
+  ],
+  "exceptionPolicy": {
+    "enabled": true,
+    "requiresSecurityReview": true,
+    "requiresExceptionReceipt": true,
+    "approverRole": "security-owner"
+  },
+  "receiptRequirements": {
+    "threat": "threat-review-receipt.v0.1",
+    "permission": "permission-receipt.v0.1",
+    "secretBoundary": "secret-boundary-receipt.v0.1",
+    "dependency": "dependency-check-receipt.v0.1",
+    "review": "security-review-receipt.v0.1",
+    "exception": "security-exception-receipt.v0.1",
+    "release": "security-release-receipt.v0.1"
+  },
+  "adjacentRepos": [
+    "governance-as-code",
+    "policy-as-code",
+    "compliance-as-code",
+    "infrastructure-as-code",
+    "agent-as-code"
+  ]
+}

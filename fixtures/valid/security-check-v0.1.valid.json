@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "validated-example",
+  "securityManifest": {
+    "id": "security-as-code/agent-admission-v1",
+    "title": "Agent admission security checks",
+    "version": 1,
+    "scope": "agent-admission"
+  },
+  "authority": {
+    "owner": "security-as-code",
+    "canActOnBehalfOf": ["security_team"]
+  },
+  "checks": [
+    {
+      "id": "permission-check",
+      "name": "Permission boundary check",
+      "type": "permission",
+      "severity": "high",
+      "status": "pass",
+      "outcome": "allowed"
+    }
+  ],
+  "exceptionPolicy": {
+    "enabled": false,
+    "requiresSecurityReview": false,
+    "requiresExceptionReceipt": false
+  },
+  "receiptRequirements": {
+    "threat": "threat-review-receipt.v0.1",
+    "permission": "permission-receipt.v0.1",
+    "secretBoundary": "secret-boundary-receipt.v0.1",
+    "dependency": "dependency-check-receipt.v0.1",
+    "review": "security-review-receipt.v0.1",
+    "exception": "security-exception-receipt.v0.1",
+    "release": "security-release-receipt.v0.1"
+  }
+}
