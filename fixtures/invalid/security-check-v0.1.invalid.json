@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "validated-example",
+  "securityManifest": {
+    "id": "security-as-code/agent-admission-v1",
+    "title": "Invalid admission checks",
+    "version": 0,
+    "scope": "agent-admission"
+  },
+  "authority": {
+    "owner": "security-as-code",
+    "canActOnBehalfOf": []
+  },
+  "checks": [
+    {
+      "id": "secret-boundary",
+      "name": "Secret boundary check",
+      "type": "secret",
+      "severity": "critical",
+      "status": "pass",
+      "evidence": []
+    }
+  ],
+  "exceptionPolicy": {
+    "enabled": true,
+    "requiresSecurityReview": true,
+    "requiresExceptionReceipt": false,
+    "approverRole": ""
+  },
+  "receiptRequirements": {
+    "threat": "threat-review-receipt.v0.1",
+    "permission": "permission-receipt.v0.1",
+    "secretBoundary": "",
+    "dependency": "dependency-check-receipt.v0.1",
+    "review": "",
+    "exception": "security-exception-receipt.v0.1"
+  }
+}
