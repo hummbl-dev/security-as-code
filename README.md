@@ -30,6 +30,7 @@
 - Schema: [`schemas/security-as-code-v0.1.json`](schemas/security-as-code-v0.1.json)
 - Example: [`examples/security-check-v0.1.example.json`](examples/security-check-v0.1.example.json)
 - Fixtures: [`fixtures/valid/security-check-v0.1.valid.json`](fixtures/valid/security-check-v0.1.valid.json), [`fixtures/invalid/security-check-v0.1.invalid.json`](fixtures/invalid/security-check-v0.1.invalid.json)
+- Receipt: [`receipts/security-as-code-v0.1-packet-receipt.md`](receipts/security-as-code-v0.1-packet-receipt.md)
 
 ## Status
 

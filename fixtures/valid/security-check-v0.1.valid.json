@@ -32,6 +32,7 @@
     "secretBoundary": "secret-boundary-receipt.v0.1",
     "dependency": "dependency-check-receipt.v0.1",
     "review": "security-review-receipt.v0.1",
-    "exception": "security-exception-receipt.v0.1"
+    "exception": "security-exception-receipt.v0.1",
+    "release": "security-release-receipt.v0.1"
   }
 }

@@ -114,7 +114,8 @@
           "type": "boolean"
         },
         "approverRole": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
       },
       "additionalProperties": false
@@ -124,25 +125,32 @@
       "required": ["threat", "permission", "secretBoundary", "dependency", "review", "exception", "release"],
       "properties": {
         "threat": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "permission": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "secretBoundary": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "dependency": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "review": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "exception": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "release": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
       },
       "additionalProperties": false
